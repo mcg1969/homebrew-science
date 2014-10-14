@@ -12,5 +12,7 @@ class Glpk < Formula
     system "make"
     system "make check"
     system "make install"
+    # These files are needed to use the old LPX API.
+    include.install "examples/oldapi/lpx.h","examples/oldapi/lpx.c"
   end
 end
